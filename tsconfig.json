@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    // используется следующая версия ES
+    "module": "ESNext",
+    "target": "es5",
+    // значение параметра "react-jsx" позволяет не использовать import React from 'react' в React 17+
+    "jsx": "react-jsx",
+    // обработка компилятором еще и JS
+    "allowJs": true,
+    "moduleResolution": "node",
+    // для абсолютного импорта
+    //"baseUrl": ".",
+    // esModuleInterop позволяет использовать вместо require() обычные импорты
+    "esModuleInterop": true,
+    // allowSyntheticDefaultImports позволяет не использовать "* as" при отсутствии export deafult
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
