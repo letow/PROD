@@ -10,8 +10,11 @@
     // обработка компилятором еще и JS
     "allowJs": true,
     "moduleResolution": "node",
-    // для абсолютного импорта
-    //"baseUrl": ".",
+    // для абсолютного импорта из папки src
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     // esModuleInterop позволяет использовать вместо require() обычные импорты
     "esModuleInterop": true,
     // allowSyntheticDefaultImports позволяет не использовать "* as" при отсутствии export deafult
