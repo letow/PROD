@@ -20,7 +20,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
         loader: "css-loader",
         options: {
           modules: {
-            auto: /\.module\.scss/gm,
+            auto: /\.module\.scss/i,
             localIdentName: isDev ? "[path][name]__[local]" : "[hash:base64:8]",
           },
         },
