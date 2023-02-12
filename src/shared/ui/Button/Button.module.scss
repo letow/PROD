@@ -1,5 +1,6 @@
 .Button {
   cursor: pointer;
+  color: var(--inv-primary-color);
 }
 
 .clear {
@@ -7,5 +8,4 @@
   outline: none;
   background: none;
   padding: 0;
-  margin: 0;
 }
