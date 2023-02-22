@@ -25,5 +25,7 @@
       "module": "CommonJS"
     }
   },
-  "include": ["./config/jest/jest-setup.ts", "src"]
+  "include": ["./config/jest/jest-setup.ts", "src"],
+  // для подсветки пропсов компонента в сториз
+  "strictBindCallApply": true
 }
