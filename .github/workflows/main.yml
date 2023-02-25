@@ -7,7 +7,7 @@ on:
     branches: [master]
 jobs:
   pipeline:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [17.x]
@@ -25,5 +25,9 @@ jobs:
         run: npm run test:unit
       - name: build storybook
         run: npm run storybook:build
+      - name: docker install
+        run: sudo apt-get install docker
+      - name: docker pull for chrome
+        run: sudo docker pull yukinying/chrome-headless-browser:90.0.4408.0
       - name: screenshot testing
         run: npm run test:ui:ci
