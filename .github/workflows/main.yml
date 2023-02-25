@@ -23,10 +23,10 @@ jobs:
         run: npm run build:prod
       - name: unit testing
         run: npm run test:unit
-      - name: docker install
-        run: sudo snap install docker
-      - name: docker pull for chrome
-        run: sudo docker pull yukinying/chrome-headless-browser-stable:100.0.4896.127
+      #- name: docker install
+      #  run: sudo snap install docker
+      #- name: docker pull for chrome
+      #  run: sudo docker pull yukinying/chrome-headless-browser-stable:100.0.4896.127
       - name: build storybook
         run: npm run storybook:build
       - name: screenshot testing
