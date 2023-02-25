@@ -28,6 +28,6 @@ jobs:
       - name: docker install
         run: sudo snap install docker
       - name: docker pull for chrome
-        run: sudo docker pull yukinying/chrome-headless-browser:90.0.4408.0
+        run: sudo docker pull yukinying/chrome-headless-browser:100.0.4896.127
       - name: screenshot testing
         run: npm run test:ui:ci
