@@ -26,7 +26,7 @@ jobs:
       - name: build storybook
         run: npm run storybook:build
       - name: docker install
-        run: sudo apt-get install docker
+        run: sudo apt-get install docker-ce
       - name: docker pull for chrome
         run: sudo docker pull yukinying/chrome-headless-browser:90.0.4408.0
       - name: screenshot testing
