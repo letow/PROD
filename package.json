@@ -59,6 +59,8 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@loki/create-async-callback": "^0.31.0",
+    "@loki/is-loki-running": "^0.31.0",
     "@types/jest": "^27.4.1",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",
