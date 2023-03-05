@@ -5,13 +5,17 @@ i18n.use(initReactI18next).init({
   lng: "ru",
   fallbackLng: "ru",
 
-  debug: false,
+  debug: true,
+
+  // have a common namespace used around the full app
+  ns: ["translationsNS"],
+  defaultNS: "translationsNS",
 
   interpolation: {
     escapeValue: false, // not needed for react!!
   },
 
-  resources: { ru: { translations: {} } },
+  resources: { ru: { translationsNS: {} } },
 });
 
 export default i18n;
