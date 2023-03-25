@@ -17,7 +17,7 @@ const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
     isOpen: true,
-    className: "app_light_theme",
+    theme: "app_light_theme",
     children: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Perferendis earum error vitae repellat inventore quis deserunt
     accusamus! In, cupiditate hic a, nesciunt laborum dolore labore
