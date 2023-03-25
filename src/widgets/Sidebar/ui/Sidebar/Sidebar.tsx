@@ -11,56 +11,56 @@ import MainIcon from "shared/assets/icons/home.svg";
 import AboutIcon from "shared/assets/icons/info.svg";
 
 interface SidebarProps {
-  className?: string;
+    className?: string;
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
-  const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useState(false);
 
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
-  const toggle = () => {
-    setCollapsed((prev) => !prev);
-  };
-  return (
-    <div
-      className={classNames(s.Sidebar, { [s.collapsed]: collapsed }, [
-        className,
-      ])}
-      data-testid="sidebar"
-    >
-      <Button
-        data-testid="sidebar-toggle"
-        onClick={toggle}
-        className={s.collapseBtn}
-        theme={ThemeButton.BACKGROUND_INVERTED}
-        size={SizeButton.L}
-        square
-      >
-        {collapsed ? ">" : "<"}
-      </Button>
-      <div className={s.items}>
-        <AppLink
-          theme={AppLinkTheme.SECONDARY}
-          to={RoutePath.main}
-          className={s.item}
+    const toggle = () => {
+        setCollapsed((prev) => !prev);
+    };
+    return (
+        <div
+            className={classNames(s.Sidebar, { [s.collapsed]: collapsed }, [
+                className,
+            ])}
+            data-testid="sidebar"
         >
-          <MainIcon className={s.icon} />
-          <span className={s.link}>{t("Главная")}</span>
-        </AppLink>
-        <AppLink
-          theme={AppLinkTheme.SECONDARY}
-          to={RoutePath.about}
-          className={s.item}
-        >
-          <AboutIcon className={s.icon} />
-          <span className={s.link}>{t("О сайте")}</span>
-        </AppLink>
-      </div>
-      <div className={s.switchers}>
-        <ThemeSwitcher />
-        <LangSwitcher short={collapsed} />
-      </div>
-    </div>
-  );
+            <Button
+                data-testid="sidebar-toggle"
+                onClick={toggle}
+                className={s.collapseBtn}
+                theme={ThemeButton.BACKGROUND_INVERTED}
+                size={SizeButton.L}
+                square
+            >
+                {collapsed ? ">" : "<"}
+            </Button>
+            <div className={s.items}>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to={RoutePath.main}
+                    className={s.item}
+                >
+                    <MainIcon className={s.icon} />
+                    <span className={s.link}>{t("Главная")}</span>
+                </AppLink>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to={RoutePath.about}
+                    className={s.item}
+                >
+                    <AboutIcon className={s.icon} />
+                    <span className={s.link}>{t("О сайте")}</span>
+                </AppLink>
+            </div>
+            <div className={s.switchers}>
+                <ThemeSwitcher />
+                <LangSwitcher short={collapsed} />
+            </div>
+        </div>
+    );
 };

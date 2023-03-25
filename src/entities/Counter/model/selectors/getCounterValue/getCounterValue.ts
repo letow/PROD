@@ -3,6 +3,6 @@ import { createSelector } from "@reduxjs/toolkit";
 import { CounterScheme } from "../../types/counterScheme";
 
 export const getCounterValue = createSelector(
-  getCounter,
-  (counter: CounterScheme) => counter.value
+    getCounter,
+    (counter: CounterScheme) => counter.value
 );

@@ -4,23 +4,23 @@ import { Button, ThemeButton } from "shared/ui/Button/Button";
 import s from "./PageError.module.scss";
 
 interface PageErrorProps {
-  className?: string;
+    className?: string;
 }
 
 export const PageError = ({ className }: PageErrorProps) => {
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
-  const reloadPage = () => {
-    location.reload();
-  };
+    const reloadPage = () => {
+        location.reload();
+    };
 
-  return (
-    <div className={classNames(s.PageError, {}, [className])}>
-      <h1>{t("Ошибка")}</h1>
-      <span></span>
-      <Button theme={ThemeButton.CLEAR} onClick={reloadPage}>
-        {t("Обновить")}
-      </Button>
-    </div>
-  );
+    return (
+        <div className={classNames(s.PageError, {}, [className])}>
+            <h1>{t("Ошибка")}</h1>
+            <span></span>
+            <Button theme={ThemeButton.CLEAR} onClick={reloadPage}>
+                {t("Обновить")}
+            </Button>
+        </div>
+    );
 };
