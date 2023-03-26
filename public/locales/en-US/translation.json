@@ -5,5 +5,7 @@
     "Обновить": "Reload page",
     "Ошибка": "Error occured",
     "Яз": "RU",
-    "Войти": "Sign in"
+    "Войти": "Sign in",
+    "Логин": "Login",
+    "Пароль": "Password"
 }
